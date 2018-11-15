@@ -92,10 +92,10 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void initt(){
+    public void initt() {
         Random rn = new Random();
         int range = 3;
-        ball_place =  rn.nextInt(range) + 1;
+        ball_place = rn.nextInt(range) + 1;
         // Шариков не видно
         imageView11.setVisibility(View.INVISIBLE);
         imageView12.setVisibility(View.INVISIBLE);
