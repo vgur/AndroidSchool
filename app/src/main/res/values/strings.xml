@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CupsAndBalls</string>
+    <string name="guess">Угадай где шарик</string>
+    <string name="button_new">Играть!</string>
+</resources>
