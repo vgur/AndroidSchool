@@ -57,6 +57,7 @@ public class MainActivity extends Activity {
                 showMessage();
             }
         });
+        initt();
     }
 
     // Визуализация шарика
@@ -89,18 +90,28 @@ public class MainActivity extends Activity {
         if (choice == ball_place) {
             imageUsd.setVisibility(View.VISIBLE);
             Toast.makeText(MainActivity.this, "Поздравляем !!!", Toast.LENGTH_LONG).show();
+            imageView1.setVisibility(View.GONE);
+            imageView2.setVisibility(View.GONE);
+            imageView3.setVisibility(View.GONE);
         }
     }
 
     public void initt() {
-        Random rn = new Random();
-        int range = 3;
-        ball_place = rn.nextInt(range) + 1;
+        // Инициализируем генератор
+        Random rnd = new Random(System.currentTimeMillis());
+        // Получаем случайное число в диапазоне от min до max (включительно)
+        ball_place = 1 + rnd.nextInt((3 - 1) + 1);
+
         // Шариков не видно
         imageView11.setVisibility(View.INVISIBLE);
         imageView12.setVisibility(View.INVISIBLE);
         imageView13.setVisibility(View.INVISIBLE);
         imageUsd.setVisibility(View.INVISIBLE);
+
+            imageView1.setVisibility(View.VISIBLE);
+            imageView2.setVisibility(View.VISIBLE);
+            imageView3.setVisibility(View.VISIBLE);
+
     }
 
 }
